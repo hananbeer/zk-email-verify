@@ -133,9 +133,8 @@ template EmailVerify(max_header_bytes, max_body_bytes, n, k) {
     // This ensures we found a match at least once
     component found_twitter = IsZero();
     found_twitter.in <== twitter_regex.out;
+    log(found_twitter.out);
     found_twitter.out === 0;
-
-    log(twitter_regex.out);
 
     // We isolate where the username begins: twitter_eq there is 1, everywhere else is 0
     component twitter_eq[max_body_bytes];
