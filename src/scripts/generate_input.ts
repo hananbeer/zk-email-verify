@@ -237,6 +237,6 @@ if (typeof require !== "undefined" && require.main === module) {
   // debug_file();
   const circuitInputs = do_generate();
   console.log("Writing to file...");
-  circuitInputs.then((inputs) => fs.writeFileSync(`./circuits/inputs/input_twitter.json`, JSON.stringify(inputs), { flag: "w" }));
+  circuitInputs.then((inputs) => fs.writeFileSync(`./circuits/inputs/input_email.json`, JSON.stringify(inputs), { flag: "w" }));
   // gen_test();
 }
